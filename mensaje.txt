@@ -1,0 +1,12 @@
+Hola {alumno},
+
+Te adjunto tu ejercicio X del examen escaneado.
+
+Este es un mensaje automático, si hay algún problema respecto a este email, por favor házmelo saber.
+
+.....
+
+
+Muchas gracias,
+
+Pablo 

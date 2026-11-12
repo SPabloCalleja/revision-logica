@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "revision-logica"
+version = "0.2.0"
+description = "Revisiones de Lógica: envío de exámenes escaneados a los alumnos (LP, LPO, cualquier convocatoria)"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas",
+    "openpyxl",
+    "pypdf",
+]
+
+[project.scripts]
+revision-logica = "revision_logica.cli:main"
+
+[tool.setuptools]
+packages = ["revision_logica"]

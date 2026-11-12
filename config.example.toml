@@ -1,0 +1,35 @@
+# ============================================================
+# Configuración de revision-logica
+# ¡NO SUBIR A GITHUB! Está en .gitignore porque contiene la contraseña.
+# (Cambia esta contraseña: estuvo en texto plano en el código antiguo.)
+# ============================================================
+
+[smtp]
+servidor = "smtp.upm.es"
+puerto = 587
+usuario = ""
+contrasena = ""
+# Copia de cada envío a tu otro correo (viaja oculta, en el sobre SMTP)
+copia_oculta = ""
+
+[correo]
+# Marcadores disponibles también en el asunto: {alumno} {apellidos}
+# {nombre_completo} {grupo} {aula} {examen}
+asunto = "[Lógica] Examen bloque "
+# Fichero externo con el texto del mensaje (puede usar los mismos marcadores)
+plantilla = "mensaje.txt"
+# Máximo de correos por minuto (ventana deslizante de 60 s)
+max_por_minuto = 50
+# Pausas anti-spam (solo en envío real): el SMTP de la UPM marca como spam
+# las ráfagas de correos seguidos, así que esperamos un poco entre cada envío
+# y descansamos al pasar de un aula a la siguiente.
+pausa_entre_envios = 4   # segundos tras cada correo
+pausa_entre_aulas = 60   # segundos entre el último de un aula y el primero del siguiente
+# Nombre con el que verá el alumno el PDF adjunto
+nombre_adjunto = "Examen_{aula}_{examen}.pdf"
+
+[general]
+# Si en el Excel el correo viene sin dominio, se completa así
+dominio_alumnos = "alumnos.upm.es"
+# Carpeta donde están los {aula}.pdf y las carpetas {aula}/
+carpeta_base = "."
